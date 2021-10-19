@@ -10,10 +10,30 @@ npm run dev
 yarn dev
 ```
 
-confit .env example
+config .env example
 
 ```bash
 MONGODB_URI=mongodb://root:example@localhost:27017/kucing-store?authSource=admin
+```
+
+set up environment:
+run docker
+
+```bash
+# run
+docker-compose up -d
+
+# check
+docker container ls
+
+# stop
+docker stop <name-container>
+
+#remove
+docker rm <name-container>
+#or
+docker rm -f <name-container>
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
