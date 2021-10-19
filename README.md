@@ -36,6 +36,8 @@ docker rm -f <name-container>
 
 ```
 
+Video toturial: [http://youtube.com](https://www.youtube.com/watch?v=3kYkEVIZNZY)
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
