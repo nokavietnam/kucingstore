@@ -1,10 +1,14 @@
-version: '3.1'
+version: '3.8'
 
 services:
   mongo:
     image: mongo:latest
     container_name: kucing-store_mongodb
     restart: always
+    expose:
+      - '27017'
+    networks:
+      - kucing-store-network
     ports:
       - 27017:27017
     environment:
@@ -15,6 +19,8 @@ services:
     image: mongo-express:latest
     container_name: kucing-store_mongo-express
     restart: always
+    networks:
+      - kucing-store-network
     ports:
       - 8081:8081
     environment:
@@ -26,5 +32,15 @@ services:
     image: kucing_store_image
     container_name: kucing-store-nextjs
     restart: always
+    networks:
+      - kucing-store-network
     ports:
       - 3000:3000
+    env_file:
+      - ../.env
+    depends_on:
+      - mongo
+
+networks:
+  kucing-store-network:
+    driver: bridge
