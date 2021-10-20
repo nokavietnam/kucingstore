@@ -36,6 +36,17 @@ docker rm -f <name-container>
 
 ```
 
+DOCKER
+
+```bash
+# build image from file docker
+docker build -t kucing_store .
+
+# create container
+docker-compose up -d
+
+```
+
 Video toturial: [http://youtube.com](https://www.youtube.com/watch?v=3kYkEVIZNZY)
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
